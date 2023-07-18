@@ -1,0 +1,247 @@
+:root{
+
+    /* colors */
+    --color-primary: #DCDCDC;
+    --color-secondary: #C6C6C6;
+    --color-secondary-shade: #B0B0B0;
+    --color-dark: #333;
+    --color-light: #F8F8F8;
+    
+    color: var(--color-dark);
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    height: 100%;
+    overflow: hidden;
+}
+
+body{
+    background-color: var(--color-primary);
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+    width: 8px;               /* width of the entire scrollbar */
+}
+  
+::-webkit-scrollbar-track {
+    background: transparent;        /* color of the tracking area */
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-secondary-shade);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    /* border: 3px solid orange; */  /* creates padding around scroll thumb */
+}
+
+h1{
+    margin: 0;
+}
+
+button.btn{
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    max-height: 48px;
+    border: 0;
+    background-color: var(--color-secondary);
+    cursor: pointer;
+}
+
+button.btn:hover{
+    background-color: var(--color-secondary-shade);
+}
+
+.container{
+    /* margin: auto 20px; */
+    height: 100%;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto 20px;
+}
+
+.search{
+    background-color: var(--color-light);
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.search img#magnify{
+    margin-right: 10px;
+}
+
+.search input[type="search"]{
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    font-size: 16px;
+}
+
+input[type='search']::-webkit-search-cancel-button {
+    height: 50px;
+    width: 50px;
+}
+
+section#notes-list{
+    margin-top: 20px;
+}
+
+section .category {
+    border-bottom: 1px solid var(--color-dark);
+    display: flex;
+}
+
+section .category span{
+    padding: 10px 15px 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+section .category span.selected{
+    background-color: var(--color-secondary);
+
+}
+
+section .category span:nth-child(2){
+    border-right: 1px solid var(--color-dark);
+    border-left: 1px solid var(--color-dark);
+}
+
+
+section ul.notes {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: calc(100vh - 190px);
+    overflow-y: auto;
+    /* overflow: overlay; */
+    /* scrollbar-gutter: stable; */
+}
+
+#no-task{
+    margin: 50px auto 0;
+    text-align: center;
+    font-style: italic;
+}
+
+section ul li.note{
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+}
+
+section ul li.note:nth-of-type(odd){
+    background-color: var(--color-light);
+}
+
+/* section ul li.note.hide:nth-of-type(odd){
+    background-color: var(--color-light);
+} */
+
+section ul li.note:last-child{
+    margin-bottom: 200px;
+}
+
+section ul li.note input[type="checkbox"]{
+    margin-right: 15px;
+    border-color: var(--color-light);
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+section ul li.note span{
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+section#add-task{
+    
+}
+
+section#add-task .task-title{
+    width: 100%;
+    background-color: var(--color-light);
+    height: 45px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+section#add-task .task-title input[type="text"]{
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    width: 95%;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+section#add-task .task-note{
+    background-color: var(--color-light);
+    /* width: 100%; */
+    border: 0;
+    outline: 0;
+    padding: 16px;
+    border-radius: 5px;
+}
+
+section#add-task .task-note textarea{
+    background-color: transparent;
+    resize: none;
+    height: 100%;
+    width: 100%;
+    border: 0;
+    outline: 0;
+    line-height: 1.7;
+    font-size: 14px;
+    overflow: overlay;
+}
+
+
+section#saved-task h3{
+    margin: 40px auto 20px;
+}
+
+section#saved-task p{
+    line-height: 1.7;
+}
+
+section{
+    display: none;
+}
+
+section.selected{
+    display: unset;
+}
+
+.hide{
+    display: none !important;
+}
+
+#preview-task h2{
+    margin: 30px auto 20px;
+}
+
+#preview-task p{
+    line-height: 1.4;
+}

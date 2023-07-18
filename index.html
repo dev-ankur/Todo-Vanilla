@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do Vanilla JS</title>
+
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>To-Do</h1>
+            <div class="btns">
+                <button class="btn" data-btn="0" id="add-task">+ Add task</button>
+                <button class="btn hide" data-btn="1" id="go-home">Home</button>
+                <button class="btn hide" data-btn="2" id="edit-note">Edit</button>
+                <button class="btn hide" data-btn="3" id="preview-note">Preview</button>
+            </div>
+        </header>
+        
+        <section id="notes-list" class="selected">
+            <div class="search">
+                <img id="magnify" src="public/search.svg" alt="">
+                <input type="search" placeholder="Search" />
+            </div>
+            <div class="category">
+                <span data-cat="0" class="selected">All</span>
+                <span data-cat="1">Remaining</span>
+                <span data-cat="2">Done</span>
+            </div>
+            
+            <ul class="notes" id="all-notes">
+                <!-- <li class="note">
+                    <input type="checkbox" name="" id="check-1" />
+                    <span>This is a note of design prototype</span>
+                </li>
+                <li class="note">
+                    <input type="checkbox" name="" id="check-1" />
+                    <span>This is a note of design prototype</span>
+                </li>
+                 -->
+            </ul>
+            <div id="no-task">You currently have no task!</div>
+        </section>
+
+        <section id="add-task">
+            <form>
+                <div class="task-title">
+                    <input id="title-edit" name="title" type="text" placeholder="Title" />
+                </div>
+                <div class="task-note">
+                    <textarea name="todonote" id="note-edit" placeholder="To-Do note..." cols="30" rows="10"></textarea>
+                </div>
+            </form>
+        </section>
+
+        <section id="preview-task">
+            <h2></h2>
+            <p></p>
+        </section>
+    </div>
+
+    <script src="scripts/func.js"></script>
+    <script src="scripts/data.js"></script>
+</body>
+</html>

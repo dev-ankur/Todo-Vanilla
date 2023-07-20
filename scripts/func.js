@@ -308,7 +308,7 @@ function createTask(i){
         setStage(2);    // preview
     })
 
-    remove.src = '/public/remove.png';
+    remove.src = 'public/remove.png';
     remove.addEventListener('click', (e)=>{
         
         e.target.parentNode.classList.add('remove');

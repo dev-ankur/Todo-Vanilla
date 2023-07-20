@@ -61,6 +61,11 @@ button.btn:hover{
     background-color: var(--color-secondary-shade);
 }
 
+button.btn img{
+    height: 20px;
+    vertical-align: text-bottom;
+}
+
 .container{
     /* margin: auto 20px; */
     height: 100%;
@@ -144,6 +149,7 @@ section ul li.note{
     padding: 10px 16px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background-color: transparent;
 }
 
@@ -151,12 +157,12 @@ section ul li.note:nth-of-type(odd){
     background-color: var(--color-light);
 }
 
-/* section ul li.note.hide:nth-of-type(odd){
-    background-color: var(--color-light);
-} */
-
 section ul li.note:last-child{
     margin-bottom: 200px;
+}
+
+section ul li.note.remove{
+    background-color: rgb(255, 138, 138);
 }
 
 section ul li.note input[type="checkbox"]{
@@ -170,6 +176,17 @@ section ul li.note input[type="checkbox"]{
 section ul li.note span{
     font-weight: bold;
     cursor: pointer;
+    flex: 2;
+}
+
+section ul li.note img{
+    display: none;
+    height: 20px;
+    cursor: pointer;
+}
+
+section ul li.note:hover img{
+    display: unset;
 }
 
 

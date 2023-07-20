@@ -14,16 +14,25 @@
             <h1>To-Do</h1>
             <div class="btns">
                 <button class="btn" data-btn="0" id="add-task">+ Add task</button>
-                <button class="btn hide" data-btn="1" id="go-home">Home</button>
-                <button class="btn hide" data-btn="2" id="edit-note">Edit</button>
-                <button class="btn hide" data-btn="3" id="preview-note">Preview</button>
+                <button class="btn hide" data-btn="1" id="go-home">
+                    <img src="/public/home.svg" alt="" />
+                    Home
+                </button>
+                <button class="btn hide" data-btn="2" id="edit-note">
+                    <img src="/public/edit.png" alt="" /> 
+                    Edit
+                </button>
+                <button class="btn hide" data-btn="3" id="preview-note">
+                    <img src="/public/preview.png" alt="" /> 
+                    Preview
+                </button>
             </div>
         </header>
         
         <section id="notes-list" class="selected">
             <div class="search">
                 <img id="magnify" src="public/search.svg" alt="">
-                <input type="search" placeholder="Search" />
+                <input id="search" type="search" placeholder="Search" />
             </div>
             <div class="category">
                 <span data-cat="0" class="selected">All</span>
@@ -63,6 +72,5 @@
     </div>
 
     <script src="scripts/func.js"></script>
-    <script src="scripts/data.js"></script>
 </body>
 </html>

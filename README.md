@@ -11,7 +11,7 @@ A Vanilla JS based to-do app in *HTML, CSS and Javascript*.
 
 ## Demo
 
-Try and see for yourself this [minimal to-do app](https://dev-ankur.github.io/ToDo-Vanilla/).
+Try and see for yourself this [minimal to-do app](https://dev-ankur.github.io/Todo-Vanilla/).
 
 
 ## Tech Stack
